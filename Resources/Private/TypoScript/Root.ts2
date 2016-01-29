@@ -17,10 +17,11 @@ prototype(Jonnitto:Sitemap:XmlSitemap) < prototype(TypoScript:Http.Message) {
 		templatePath = 'resource://Jonnitto.Sitemap/Private/Templates/Page/XmlSiteMap.xml'
 		startingPoint = ${site}
 
-		removeNodeFromSitemap = ${q(item).is(configuration.removeNodeFromSitemap) || q(item).property('metaRobotsNoindex')}
+		removeNodeFromSitemap = ${configuration.removeNodeFromSitemap ? q(item).is('[instanceof TYPO3.Neos:Shortcut]') : false||q(item).property('metaRobotsNoindex')}
+
 		loc = TypoScript:Case {
 			isPageSection {
-				condition = ${q(item).is(configuration.pageSection)}
+				condition = ${configuration.pageSection ? q(item).is(configuration.pageSection) : false}
 				renderer = Neos:NodeUri {
 					node = ${q(item).parents(configuration.page).get(0)}
 					format = 'html'
