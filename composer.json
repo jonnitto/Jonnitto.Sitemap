@@ -1,0 +1,23 @@
+{
+    "name": "jonnitto/sitemap",
+    "type": "typo3-flow-plugin",
+    "description": "XML-Sitemap with some improvements",
+    "version": "2.1.0",
+    "require": {
+        "typo3/neos": "~2.0",
+        "typo3/neos-seo": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Jonnitto\\Sitemap": "Classes"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jon Uhlmann",
+            "email": "me@jonnitto.ch",
+            "homepage": "https://twitter.com/jonnitto",
+            "role": "Developer"
+        }
+    ]
+}

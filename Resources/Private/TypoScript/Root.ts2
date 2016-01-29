@@ -1,0 +1,54 @@
+namespace: TypoScript=TYPO3.TypoScript
+namespace: Neos=TYPO3.Neos
+namespace: Sitemap=Jonnitto.Sitemap
+
+prototype(Jonnitto:Sitemap:XmlSitemap) < prototype(TypoScript:Http.Message) {
+	doctype = '<?xml version="1.0" encoding="UTF-8"?>'
+	httpResponseHead.headers.Content-Type = 'text/xml'
+
+	body = Menu {
+		@override.configuration = ${Configuration.setting('Jonnitto.Sitemap')}
+
+		root = ${site}
+		filter = ${configuration.filter}
+		entryLevel = 0
+		maximumLevels = ${configuration.maximumLevels}
+		renderHiddenInIndex = ${configuration.renderHiddenInIndex}
+		templatePath = 'resource://Jonnitto.Sitemap/Private/Templates/Page/XmlSiteMap.xml'
+		startingPoint = ${site}
+
+		removeNodeFromSitemap = ${q(item).is(configuration.removeNodeFromSitemap) || q(item).property('metaRobotsNoindex')}
+		loc = TypoScript:Case {
+			isPageSection {
+				condition = ${q(item).is(configuration.pageSection)}
+				renderer = Neos:NodeUri {
+					node = ${q(item).parents(configuration.page).get(0)}
+					format = 'html'
+					absolute = true
+					section = TypoScript:Collection {
+						array = ${q(item).add(q(item).parentsUntil(configuration.page)).get()}
+						collection = ${Array.reverse(this.array)}
+						iterationName = 'iterator'
+						itemName = 'element'
+						itemRenderer = ${(iterator.isFirst ? configuration.seperator.first : configuration.seperator.descend) + q(element).property('uriPathSegment')}
+					}
+				}
+			}
+			default {
+				condition = true
+				renderer = Neos:NodeUri {
+					node = ${item}
+					format = 'html'
+					absolute = true
+				}
+			}
+		}
+
+		@cache.entryTags.1 = ${'DescendantOf_' + this.startingPoint.identifier}
+	}
+}
+
+root.xmlImprovedSitemap {
+	condition = ${request.format == 'xml.improvedsitemap'}
+	type = 'Jonnitto:Sitemap:XmlSitemap'
+}

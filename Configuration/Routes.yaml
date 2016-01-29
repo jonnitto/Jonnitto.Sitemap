@@ -1,0 +1,35 @@
+#                                                                        #
+# Default subroutes configuration for the Jonnitto.Sitemap package       #
+#                                                                        #
+
+# Make sure to include the following commented route before the TYPO3.Neos subroutes in your global /Configuration/Routes.yaml
+
+##
+# Jonnitto Sitemap: Improved XML Sitemap
+
+#-
+#  name: 'Jonnitto Sitemap'
+#  uriPattern: '<JonnittoSitemapSubroutes>'
+#  subRoutes:
+#    'JonnittoSitemapSubroutes':
+#      package: 'Jonnitto.Sitemap'
+#      variables:
+#        'xmlSitemapPath': 'sitemap.xml'
+
+##
+# XML Sitemap
+
+-
+  name:  'Improved XML Sitemap'
+  uriPattern: '{node}<xmlSitemapPath>'
+  defaults:
+    '@package':    'TYPO3.Neos'
+    '@controller': 'Frontend\Node'
+    '@action':     'show'
+    '@format':     'xml.improvedsitemap'
+  routeParts:
+    'node':
+      handler:     'TYPO3\Neos\Routing\FrontendNodeRoutePartHandlerInterface'
+      options:
+        onlyMatchSiteNodes: TRUE
+  appendExceedingArguments: TRUE

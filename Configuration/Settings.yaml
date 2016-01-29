@@ -1,0 +1,17 @@
+TYPO3:
+  Neos:
+    typoScript:
+      autoInclude:
+        'Jonnitto.Sitemap': TRUE
+
+Jonnitto:
+  Sitemap:
+    filter: 'TYPO3.Neos:Document'
+    maximumLevels: 999
+    renderHiddenInIndex: TRUE
+    removeNodeFromSitemap: '[instanceof TYPO3.Neos:Shortcut]'
+    page: '[instanceof TYPO3.Neos.NodeTypes:Page]'
+    pageSection: FALSE # Set here the instance of the Documents which are going to have hashes e.g. '[instanceof Acme.Foo:PageSection],[instanceof Acme.bar:PageSection]'
+    seperator:
+      first: '!/'
+      descend: '/'

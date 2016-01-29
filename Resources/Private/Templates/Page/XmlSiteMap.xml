@@ -1,0 +1,19 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>{neos:uri.node(node: root, format: 'html', absolute: true)}</loc><f:if condition="{root.sitemapXmlChangeFrequency}"><changefreq>{root.sitemapXmlChangeFrequency}</changefreq></f:if><f:if condition="{root.sitemapXmlPriority}"><priority>{root.sitemapXmlPriority}</priority></f:if>
+	</url><f:render section="itemsList" arguments="{items: items}" />
+</urlset>
+<f:section name="itemsList">
+	<f:for each="{items}" as="item">
+		<f:if condition="{ts:render(path:'removeNodeFromSitemap'  context:'{item: item.node}')}"><f:else>
+			<url>
+				<loc><ts:render path="loc" context="{item: item.node}" /></loc>
+				<f:if condition="{item.node.properties.xmlSitemapChangeFrequency}"><changefreq>{item.node.properties.xmlSitemapChangeFrequency}</changefreq></f:if>
+				<priority>{f:if(condition: item.node.properties.xmlSitemapPriority, then: item.node.properties.xmlSitemapPriority, else: '0.5')}</priority>
+			</url>
+		</f:else></f:if>
+		<f:if condition="{item.subItems}"><f:render section="itemsList" arguments="{items: item.subItems}"/></f:if>
+	</f:for>
+</f:section>
