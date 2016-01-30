@@ -1,5 +1,7 @@
-# Jonnitto.Sitemap
-XML-Sitemap for Neos CMS with some improvements:
+Jonnitto.Sitemap
+================
+
+XML-Sitemap for [Neos CMS](https://www.neos.io) with some improvements:
 
 * You can set which types of pages are included to get hashed links. In that way you can provide a sitemap who links also to a particular part of a page.  
 * The property `metaRobotsNoindex` is also observed.  
