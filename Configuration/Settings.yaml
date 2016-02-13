@@ -9,9 +9,9 @@ Jonnitto:
     filter: 'TYPO3.Neos:Document'
     maximumLevels: 999
     renderHiddenInIndex: TRUE
-    removeNodeFromSitemap: '[instanceof TYPO3.Neos:Shortcut]'
+    removeFromSitemap: '[instanceof TYPO3.Neos:Shortcut]'
     page: '[instanceof TYPO3.Neos.NodeTypes:Page]'
-    pageSection: '[!instanceof TYPO3.Neos.NodeTypes:Page]'
+    ajaxPage: '[!instanceof TYPO3.Neos.NodeTypes:Page]'
     seperator:
       first: '!/'
       descend: '/'

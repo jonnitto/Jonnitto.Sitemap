@@ -2,7 +2,7 @@
     "name": "jonnitto/sitemap",
     "type": "typo3-flow-plugin",
     "description": "XML-Sitemap for Neos CMS with some improvements",
-    "version": "2.1.1",
+    "version": "2.1.2",
     "license": "MIT",
     "require": {
         "typo3/neos": "~2.0",
