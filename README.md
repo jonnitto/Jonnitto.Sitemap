@@ -3,9 +3,9 @@ Jonnitto.Sitemap
 
 XML-Sitemap for [Neos CMS](https://www.neos.io) with some improvements:
 
-* You can set which types of pages are included to get hashed links. In that way you can provide a sitemap who links  to ajax pages.  
-* The property `metaRobotsNoindex` get observed.  
-* You can also set which kind of pages (like Shortcuts) are getting ignored.  
+* You can set which types of pages are included to get hashed links. In that way you can provide a sitemap who links  to ajax pages.
+* The property `metaRobotsNoindex` get observed.
+* You can also set which kind of pages (like Shortcuts) are getting ignored.
 
 **Make sure to include the commented route in `Jonnitto.Sitemap/Configuration/Routes.yaml` before the TYPO3.Neos subroutes in your global ``/Configuration/Routes.yaml`.**
 
