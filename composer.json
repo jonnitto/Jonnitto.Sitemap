@@ -20,5 +20,8 @@
             "homepage": "https://twitter.com/jonnitto",
             "role": "Developer"
         }
-    ]
+    ],
+    "extra": {
+        "marketplace-account": "<me@jonnitto.ch>"
+    }
 }
