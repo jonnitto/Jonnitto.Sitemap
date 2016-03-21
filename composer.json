@@ -2,7 +2,7 @@
     "name": "jonnitto/sitemap",
     "type": "typo3-flow-plugin",
     "description": "XML-Sitemap for Neos CMS with some improvements",
-    "version": "2.1.2",
+    "version": "2.1.3",
     "license": "MIT",
     "require": {
         "typo3/neos": "~2.0",
@@ -22,6 +22,6 @@
         }
     ],
     "extra": {
-        "marketplace-account": "<me@jonnitto.ch>"
+        "marketplace-account": "me@jonnitto.ch"
     }
 }
