@@ -7,7 +7,7 @@
 </urlset>
 <f:section name="itemsList">
 	<f:for each="{items}" as="item">
-		<f:if condition="{ts:render(path:'removeNodeFromSitemap'  context:'{item: item.node}')}"><f:else>
+		<f:if condition="{ts:render(path:'removeFromSitemap'  context:'{item: item.node}')}"><f:else>
 			<url>
 				<loc><ts:render path="loc" context="{item: item.node}" /></loc>
 				<f:if condition="{item.node.properties.xmlSitemapChangeFrequency}"><changefreq>{item.node.properties.xmlSitemapChangeFrequency}</changefreq></f:if>
