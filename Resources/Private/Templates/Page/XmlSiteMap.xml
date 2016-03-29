@@ -2,7 +2,9 @@
 {namespace ts=TYPO3\TypoScript\ViewHelpers}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>{neos:uri.node(node: root, format: 'html', absolute: true)}</loc><f:if condition="{root.sitemapXmlChangeFrequency}"><changefreq>{root.sitemapXmlChangeFrequency}</changefreq></f:if><f:if condition="{root.sitemapXmlPriority}"><priority>{root.sitemapXmlPriority}</priority></f:if>
+		<loc>{neos:uri.node(node: root, format: 'html', absolute: true)}</loc>
+		<f:if condition="{root.properties.xmlSitemapChangeFrequency}"><changefreq>{root.properties.xmlSitemapChangeFrequency}</changefreq></f:if>
+		<priority>{f:if(condition: root.properties.xmlSitemapPriority, then: root.properties.xmlSitemapPriority, else: '0.5')}</priority>
 	</url><f:render section="itemsList" arguments="{items: items}" />
 </urlset>
 <f:section name="itemsList">
