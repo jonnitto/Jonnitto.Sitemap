@@ -1,6 +1,10 @@
 Jonnitto.Sitemap
 ================
 
+[![Latest Stable Version](https://poser.pugx.org/jonnitto/sitemap/v/stable)](https://packagist.org/packages/jonnitto/sitemap)
+[![Total Downloads](https://poser.pugx.org/jonnitto/sitemap/downloads)](https://packagist.org/packages/jonnitto/sitemap)
+[![License](https://poser.pugx.org/jonnitto/sitemap/license)](https://packagist.org/packages/jonnitto/sitemap)
+
 XML-Sitemap for [Neos CMS](https://www.neos.io) with some improvements:
 
 * You can set which types of pages are included to get hashed links. In that way you can provide a sitemap who links  to ajax pages.
