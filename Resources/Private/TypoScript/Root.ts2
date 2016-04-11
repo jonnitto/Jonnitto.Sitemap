@@ -7,7 +7,7 @@ prototype(Jonnitto:Sitemap:XmlSitemap) < prototype(TypoScript:Http.Message) {
 	httpResponseHead.headers.Content-Type = 'text/xml'
 
 	body = Menu {
-		@override.configuration = ${Configuration.setting('Jonnitto.Sitemap')}
+		@context.configuration = ${Configuration.setting('Jonnitto.Sitemap')}
 
 		root = ${site}
 		filter = ${configuration.filter}
