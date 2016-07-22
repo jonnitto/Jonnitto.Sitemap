@@ -1,9 +1,6 @@
 prototype(XML:Priority) < prototype(TS:Tag) {
-	@context.priority = TS:Value {
-		xmlSitemapPriority = ${q(node).property('xmlSitemapPriority')}
-		value = ${this.xmlSitemapPriority == '' ? configuration.defaultPriority : this.xmlSitemapPriority}
-	}
+	@context.priority = ${q(node).property('xmlSitemapPriority')}
 	tagName = 'priority'
 	content = ${priority}
-	@if.hasValue = ${priority != false}
+	@if.hasValue = ${!String.isBlank(priority)}
 }

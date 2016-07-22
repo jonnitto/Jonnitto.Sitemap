@@ -1,0 +1,8 @@
+prototype(XML:LastMod) < prototype(TS:Tag) {
+	@context.lastmod = ${q(node).property('_lastmodificationdatetime')}
+	isoFormat = false
+	format = ${this.isoFormat ? 'c' : 'Y-m-d'}
+	tagName = 'lastmod'
+	content = ${Date.format(lastmod, this.format)}
+	@if.hasValue = ${Type.isObject(lastmod)}
+}

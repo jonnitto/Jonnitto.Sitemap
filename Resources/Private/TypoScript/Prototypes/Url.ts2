@@ -5,6 +5,7 @@ prototype(XML:Url) < prototype(TS:Tag) {
 		loc = XML:Loc
 		changefreq = XML:ChangeFreq
 		priority = XML:Priority
+		lastmod = XML:LastMod
 	}
 
 	@if.metaIsNotSet = ${q(node).property('metaRobotsNoindex') ? false : true}
