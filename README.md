@@ -8,8 +8,8 @@ Jonnitto.Sitemap
 XML-Sitemap for [Neos CMS](https://www.neos.io) with some improvements:
 
 * The property `metaRobotsNoindex` get observed.
-* You can set which kind of pages (like Shortcuts) are getting ignored.
 * Template-Less approach: All is done in TypoScript
+* With the NodeType Mixin `Jonnitto.Sitemap:RemoveFromSitemap` you can easily set which document node should not show up in the `sitemap.xml`. `TYPO3.Neos:Shortcut` is already done like that.
 
 **Make sure to include the commented route in `Jonnitto.Sitemap/Configuration/Routes.yaml` before the TYPO3.Neos subroutes in your global ``/Configuration/Routes.yaml`.**
 
