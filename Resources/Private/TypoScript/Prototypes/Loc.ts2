@@ -1,0 +1,8 @@
+prototype(XML:Loc) < prototype(TS:Tag) {
+	tagName = 'loc'
+	content = NodeUri {
+		node = ${node}
+		format = 'html'
+		absolute = true
+	}
+}

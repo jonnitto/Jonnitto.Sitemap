@@ -1,0 +1,6 @@
+prototype(XML:ChangeFreq) < prototype(TS:Tag) {
+	@context.changefreq = ${q(node).property('xmlSitemapChangeFrequency')}
+	tagName = 'changefreq'
+	content = ${changefreq}
+	@if.hasValue = ${changefreq ? true : false}
+}

@@ -6,12 +6,5 @@ TYPO3:
 
 Jonnitto:
   Sitemap:
-    filter: 'TYPO3.Neos:Document'
-    maximumLevels: 999
-    renderHiddenInIndex: TRUE
-    removeFromSitemap: '[instanceof TYPO3.Neos:Shortcut]'
-    page: '[instanceof TYPO3.Neos.NodeTypes:Page]'
-    ajaxPage: '[!instanceof TYPO3.Neos.NodeTypes:Page]'
-    seperator:
-      first: '!/'
-      descend: '/'
+    collection: '[instanceof TYPO3.Neos:Document][!instanceof TYPO3.Neos:Shortcut]'
+    defaultPriority: 0.5

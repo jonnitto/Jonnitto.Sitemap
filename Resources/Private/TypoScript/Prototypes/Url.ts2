@@ -1,0 +1,11 @@
+prototype(XML:Url) < prototype(TS:Tag) {
+	tagName = 'url'
+	node = ${node}
+	content = TS:Array {
+		loc = XML:Loc
+		changefreq = XML:ChangeFreq
+		priority = XML:Priority
+	}
+
+	@if.metaIsNotSet = ${q(node).property('metaRobotsNoindex') ? false : true}
+}
