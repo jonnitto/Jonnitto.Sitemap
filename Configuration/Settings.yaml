@@ -6,5 +6,5 @@ TYPO3:
 
 Jonnitto:
   Sitemap:
-    collection: '[instanceof TYPO3.Neos:Document][!instanceof TYPO3.Neos:Shortcut]'
+    collection: '[instanceof TYPO3.Neos:Document][!instanceof Jonnitto.Sitemap:RemoveFromSitemap]'
     defaultPriority: 0.5
