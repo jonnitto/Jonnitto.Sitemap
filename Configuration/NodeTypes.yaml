@@ -1,6 +1,6 @@
 'Jonnitto.Sitemap:RemoveFromSitemap':
-  abstract: TRUE
+  abstract: true
 
 TYPO3.Neos:Shortcut:
   superTypes:
-    'Jonnitto.Sitemap:RemoveFromSitemap': TRUE
+    'Jonnitto.Sitemap:RemoveFromSitemap': true

@@ -31,5 +31,5 @@
     'node':
       handler:     'TYPO3\Neos\Routing\FrontendNodeRoutePartHandlerInterface'
       options:
-        onlyMatchSiteNodes: TRUE
-  appendExceedingArguments: TRUE
+        onlyMatchSiteNodes: true
+  appendExceedingArguments: true

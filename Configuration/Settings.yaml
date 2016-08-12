@@ -2,7 +2,7 @@ TYPO3:
   Neos:
     typoScript:
       autoInclude:
-        'Jonnitto.Sitemap': TRUE
+        'Jonnitto.Sitemap': true
 
 Jonnitto:
   Sitemap:
