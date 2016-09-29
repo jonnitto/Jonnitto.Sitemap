@@ -1,4 +1,4 @@
-prototype(XML:ChangeFreq) < prototype(TS:Tag) {
+prototype(XML:ChangeFreq) < prototype(Fusion:Tag) {
 	@context.changefreq = ${q(node).property('xmlSitemapChangeFrequency')}
 	tagName = 'changefreq'
 	content = ${changefreq}

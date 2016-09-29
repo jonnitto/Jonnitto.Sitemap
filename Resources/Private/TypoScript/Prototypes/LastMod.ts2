@@ -1,4 +1,4 @@
-prototype(XML:LastMod) < prototype(TS:Tag) {
+prototype(XML:LastMod) < prototype(Fusion:Tag) {
 	@context.lastmod = ${q(node).property('_lastmodificationdatetime')}
 	isoFormat = false
 	format = ${this.isoFormat ? 'c' : 'Y-m-d'}

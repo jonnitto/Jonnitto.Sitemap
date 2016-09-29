@@ -1,7 +1,7 @@
-prototype(XML:Url) < prototype(TS:Tag) {
+prototype(XML:Url) < prototype(Fusion:Tag) {
 	tagName = 'url'
 	node = ${node}
-	content = TS:Array {
+	content = Fusion:Array {
 		loc = XML:Loc
 		changefreq = XML:ChangeFreq
 		priority = XML:Priority
@@ -10,7 +10,7 @@ prototype(XML:Url) < prototype(TS:Tag) {
 
 	@if {
 		metaIsNotSet = ${q(node).property('metaRobotsNoindex') ? false : true}
-		noHiddenParents = TS:Value {
+		noHiddenParents = Fusion:Value {
 			item = ${node}
 			visibleCount = ${q(this.item).parents().count()}
 			invisibleCount = ${q(this.item).context({'invisibleContentShown': true}).parents().count()}

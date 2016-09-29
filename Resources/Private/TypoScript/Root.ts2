@@ -1,5 +1,5 @@
-namespace: TS=TYPO3.TypoScript
-namespace: XML=Jonnitto.Sitemap
+namespace: Fusion = TYPO3.TypoScript
+namespace: XML = Jonnitto.Sitemap
 
 include: Prototypes/**/*.ts2
 

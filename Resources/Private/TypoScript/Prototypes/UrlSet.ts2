@@ -1,4 +1,4 @@
-prototype(XML:UrlSet) < prototype(TS:Tag) {
+prototype(XML:UrlSet) < prototype(Fusion:Tag) {
 	@context.configuration = ${Configuration.setting('Jonnitto.Sitemap')}
 	tagName = 'urlset'
 	attributes.xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"

@@ -1,4 +1,4 @@
-prototype(XML:Priority) < prototype(TS:Tag) {
+prototype(XML:Priority) < prototype(Fusion:Tag) {
 	@context.priority = ${q(node).property('xmlSitemapPriority')}
 	tagName = 'priority'
 	content = ${priority}
