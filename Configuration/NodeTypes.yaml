@@ -3,4 +3,4 @@
   abstract: true
 'TYPO3.Neos:Shortcut':
   superTypes:
-    'Jonnitto.Sitemap:RemoveFromSitemap': '1'
+    'Jonnitto.Sitemap:RemoveFromSitemap': true
