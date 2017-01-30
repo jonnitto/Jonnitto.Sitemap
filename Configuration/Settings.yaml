@@ -1,9 +1,9 @@
-TYPO3:
-  Neos:
-    typoScript:
-      autoInclude:
-        'Jonnitto.Sitemap': true
 
 Jonnitto:
   Sitemap:
-    collection: '[instanceof TYPO3.Neos:Document][!instanceof Jonnitto.Sitemap:RemoveFromSitemap]'
+    collection: '[instanceof Neos.Neos:Document][!instanceof Jonnitto.Sitemap:RemoveFromSitemap]'
+Neos:
+  Neos:
+    typoScript:
+      autoInclude:
+        Jonnitto.Sitemap: true
