@@ -4,6 +4,6 @@ Jonnitto:
     collection: '[instanceof Neos.Neos:Document][!instanceof Jonnitto.Sitemap:RemoveFromSitemap]'
 Neos:
   Neos:
-    typoScript:
+    fusion:
       autoInclude:
         Jonnitto.Sitemap: true
