@@ -1,7 +1,7 @@
 namespace: Fusion = Neos.Fusion
 namespace: XML = Jonnitto.Sitemap
 
-include: Prototypes/**/*.ts2
+include: Prototypes/**/*.fusion
 
 root.xmlImprovedSitemap {
 	condition = ${request.format == 'xml.improvedsitemap'}

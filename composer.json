@@ -1,16 +1,15 @@
 {
     "name": "jonnitto/sitemap",
-    "type": "typo3-flow-plugin",
+    "type": "neos-plugin",
     "description": "XML-Sitemap for Neos CMS with some improvements",
-    "version": "2.2.3",
     "license": "MIT",
     "require": {
-        "typo3/neos": "~2.0",
+        "typo3/neos": "~3.0",
         "typo3/neos-seo": "*"
     },
     "autoload": {
-        "psr-0": {
-            "Jonnitto\\Sitemap": "Classes"
+        "psr-4": {
+            "Jonnitto\\Sitemap\\": "Classes"
         }
     },
     "authors": [
