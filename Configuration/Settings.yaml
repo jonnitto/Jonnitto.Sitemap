@@ -1,9 +1,16 @@
-
 Jonnitto:
   Sitemap:
     collection: '[instanceof Neos.Neos:Document][!instanceof Jonnitto.Sitemap:RemoveFromSitemap]'
+
 Neos:
   Neos:
     fusion:
       autoInclude:
         Jonnitto.Sitemap: true
+  Flow:
+    mvc:
+      routes:
+        'Jonnitto.Sitemap':
+          position: 'start'
+          variables:
+            xmlSitemapPath: 'sitemap.xml'

@@ -1,6 +1,6 @@
-
 'Jonnitto.Sitemap:RemoveFromSitemap':
   abstract: true
+
 'Neos.Neos:Shortcut':
   superTypes:
     'Jonnitto.Sitemap:RemoveFromSitemap': true
