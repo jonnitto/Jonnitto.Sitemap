@@ -4,8 +4,8 @@
     "description": "XML-Sitemap for Neos CMS with some improvements",
     "license": "MIT",
     "require": {
-        "typo3/neos": "~3.0",
-        "typo3/neos-seo": "*"
+        "neos/neos": "~3.0",
+        "neos/seo": "*"
     },
     "autoload": {
         "psr-4": {
