@@ -8,7 +8,7 @@ Jonnitto.Sitemap
 XML-Sitemap for [Neos CMS](https://www.neos.io) with some improvements:
 
 * The property `metaRobotsNoindex` get observed.
-* Template-Less approach: All is done in TypoScript
+* Template-Less approach: Everything is done in Fusion
 * With the NodeType Mixin `Jonnitto.Sitemap:RemoveFromSitemap` you can easily set which document node should not show up in the `sitemap.xml`. `Neos.Neos:Shortcut` is already done like that.
 
 
