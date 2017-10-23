@@ -1,6 +1,0 @@
-prototype(XML:ChangeFreq) < prototype(Fusion:Tag) {
-	@context.changefreq = ${q(node).property('xmlSitemapChangeFrequency')}
-	tagName = 'changefreq'
-	content = ${changefreq}
-	@if.hasValue = ${changefreq ? true : false}
-}

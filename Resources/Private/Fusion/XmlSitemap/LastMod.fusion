@@ -1,0 +1,9 @@
+prototype(Jonnitto.Sitemap:LastMod) < prototype(Neos.Fusion:Tag) {
+    lastmod = ${q(node).property('_lastmodificationdatetime')}
+
+    isoFormat = false
+    format = ${this.isoFormat ? 'c' : 'Y-m-d'}
+    tagName = 'lastmod'
+    content = ${Date.format(this.lastmod, this.format)}
+    @if.hasValue = ${Type.isObject(this.lastmod)}
+}

@@ -1,0 +1,5 @@
+prototype(Jonnitto.Sitemap:Collection) < prototype(Neos.Fusion:Collection) {
+    collection = ${q(site).add(q(site).find(configuration.collection))}
+    itemName = 'node'
+    itemRenderer = Jonnitto.Sitemap:Url
+}

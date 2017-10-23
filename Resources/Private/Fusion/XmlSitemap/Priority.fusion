@@ -1,0 +1,5 @@
+prototype(Jonnitto.Sitemap:Priority) < prototype(Neos.Fusion:Tag) {
+    tagName = 'priority'
+    content = ${q(node).property('xmlSitemapPriority')}
+    @if.hasValue = ${!String.isBlank(this.content)}
+}

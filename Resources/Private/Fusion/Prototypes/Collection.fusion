@@ -1,5 +1,0 @@
-prototype(XML:Collection) < prototype(Fusion:Collection) {
-	collection = ${q(site).add(q(site).find(configuration.collection))}
-	itemName = 'node'
-	itemRenderer = XML:Url
-}

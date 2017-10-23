@@ -1,8 +1,0 @@
-prototype(XML:Loc) < prototype(Fusion:Tag) {
-	tagName = 'loc'
-	content = NodeUri {
-		node = ${node}
-		format = 'html'
-		absolute = true
-	}
-}

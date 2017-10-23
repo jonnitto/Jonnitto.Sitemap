@@ -1,9 +1,12 @@
-namespace: Fusion = Neos.Fusion
-namespace: XML = Jonnitto.Sitemap
+include: **/*.fusion
 
-include: Prototypes/**/*.fusion
-
-root.xmlImprovedSitemap {
-	condition = ${request.format == 'xml.improvedsitemap'}
-	type = 'Jonnitto.Sitemap:XmlSitemap'
+root {
+    xmlImprovedSitemap {
+        condition = ${request.format == 'xml.improvedsitemap'}
+        renderer = Jonnitto.Sitemap:XmlSitemap
+    }
+    textRobots {
+        condition = ${request.format == 'txt.robots'}
+        renderer = Jonnitto.Sitemap:TxtRobots
+    }
 }

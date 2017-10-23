@@ -20,6 +20,9 @@
             "role": "Developer"
         }
     ],
+    "archive": {
+        "exclude": [".editorconfig", ".github", ".gitattributes", "CODE_OF_CONDUCT.md"]
+    },
     "extra": {
         "marketplace-account": "me@jonnitto.ch",
         "applied-flow-migrations": [

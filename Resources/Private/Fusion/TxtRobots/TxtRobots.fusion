@@ -1,0 +1,29 @@
+prototype(Jonnitto.Sitemap:TxtRobots) < prototype(Neos.Fusion:Http.Message) {
+    httpResponseHead.headers.Content-Type = 'text/plain;'
+    body = Neos.Fusion:Template {
+        templatePath = 'resource://Jonnitto.Sitemap/Private/Fusion/TxtRobots/TxtRobots.txt'
+
+        sitemaps = Neos.Fusion:Case {
+            hasLanguage {
+                condition = ${Configuration.setting('Neos.ContentRepository.contentDimensions.language') != null}
+                renderer = DimensionsMenu {
+                    dimension = 'language'
+                    templatePath = 'resource://Jonnitto.Sitemap/Private/Fusion/TxtRobots/Sitemap.html'
+                    renderHiddenInIndex = true
+                    includeAllPresets = true
+                }
+            }
+            noLanguage {
+                condition = true
+                renderer = Fusion:Array {
+                    sitemap = 'Sitemap: '
+                    url = NodeUri {
+                        absolute = true
+                        format = 'xml.improvedsitemap'
+                        node = ${site}
+                    }
+                }
+            }
+        }
+    }
+}
