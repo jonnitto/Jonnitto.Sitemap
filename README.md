@@ -10,6 +10,7 @@ XML-Sitemap for [Neos CMS](https://www.neos.io) with some improvements:
 * The property `metaRobotsNoindex` get observed.
 * Template-Less approach: Everything is done in Fusion
 * With the NodeType Mixin `Jonnitto.Sitemap:RemoveFromSitemap` you can easily set which document node should not show up in the `sitemap.xml`. `Neos.Neos:Shortcut` is already done like that.
+* Add `robots.txt` with automatic sitemap entries. Works also great in multi-site environments
 
 Installation
 ------------
