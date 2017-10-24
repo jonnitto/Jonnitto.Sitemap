@@ -9,6 +9,7 @@ prototype(Jonnitto.Sitemap:TxtRobots) < prototype(Neos.Fusion:Http.Message) {
                 renderer = DimensionsMenu {
                     dimension = 'language'
                     templatePath = 'resource://Jonnitto.Sitemap/Private/Fusion/TxtRobots/Sitemap.html'
+                    presets = ${Configuration.setting('Jonnitto.Sitemap.robotsTxt.dimensionsPresets')}
                     renderHiddenInIndex = true
                     includeAllPresets = true
                 }

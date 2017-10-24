@@ -1,6 +1,8 @@
 Jonnitto:
   Sitemap:
     collection: '[instanceof Neos.Neos:Document][!instanceof Jonnitto.Sitemap:RemoveFromSitemap]'
+    robotsTxt:
+      dimensionsPresets: null
 
 Neos:
   Neos:
