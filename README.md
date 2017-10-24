@@ -15,6 +15,16 @@ XML-Sitemap for [Neos CMS](https://www.neos.io) with some improvements:
 **Important**  
 To activate the automatic `robots.txt` you have to delete the `robots.txt` inside the `/Web` folder. You also have to edit the `.htaccess`: Change the line `RewriteRule ^(_Resources/Packages/|robots\.txt|favicon\.ico) - [L]` to `RewriteRule ^(_Resources/Packages/|favicon\.ico) - [L]`
 
+If you only want to render a subset of the available language dimensions (e.g. if the filling is not yet ready) you can set this in the Settings.yaml:
+
+```
+Jonnitto:
+  Sitemap:
+    robotsTxt:
+      # Activate only english and german
+      dimensionsPresets: ['en','de']
+```
+
 Installation
 ------------
 Most of the time you have to make small adjustments to a package (e.g. configuration in Settings.yaml). Because of that, it is important to add the corresponding package to the composer from your theme package. Mostly this is the site packages located under Packages/Sites/. To install it correctly go to your theme package (e.g.Packages/Sites/Foo.Bar) and run following command:
