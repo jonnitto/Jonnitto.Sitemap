@@ -15,7 +15,7 @@ XML-Sitemap for [Neos CMS](https://www.neos.io) with some improvements:
 **Important**  
 To activate the automatic `robots.txt` you have to delete the `robots.txt` inside the `/Web` folder. You also have to edit the `.htaccess`: Change the line `RewriteRule ^(_Resources/Packages/|robots\.txt|favicon\.ico) - [L]` to `RewriteRule ^(_Resources/Packages/|favicon\.ico) - [L]`
 
-If you only want to render a subset of the available language dimensions (e.g. if the filling is not yet ready) you can set this in the Settings.yaml:
+If you only want to render a subset of the available language dimensions (e.g., if the filling is not yet ready) you can set this in the `Settings.yaml`:
 
 ```
 Jonnitto:
