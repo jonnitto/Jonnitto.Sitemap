@@ -1,9 +1,14 @@
-Jonnitto.Sitemap
-================
-
 [![Latest Stable Version](https://poser.pugx.org/jonnitto/sitemap/v/stable)](https://packagist.org/packages/jonnitto/sitemap)
 [![Total Downloads](https://poser.pugx.org/jonnitto/sitemap/downloads)](https://packagist.org/packages/jonnitto/sitemap)
-[![License](https://poser.pugx.org/jonnitto/sitemap/license)](https://packagist.org/packages/jonnitto/sitemap)
+[![License](https://poser.pugx.org/jonnitto/sitemap/license)](LICENSE)
+[![GitHub forks](https://img.shields.io/github/forks/jonnitto/Jonnitto.Sitemap.svg?style=social&label=Fork)](https://github.com/jonnitto/Jonnitto.Sitemap/fork)
+[![GitHub stars](https://img.shields.io/github/stars/jonnitto/Jonnitto.Sitemap.svg?style=social&label=Stars)](https://github.com/jonnitto/Jonnitto.Sitemap/stargazers)
+[![GitHub watchers](https://img.shields.io/github/watchers/jonnitto/Jonnitto.Sitemap.svg?style=social&label=Watch)](https://github.com/jonnitto/Jonnitto.Sitemap/subscription)
+[![GitHub followers](https://img.shields.io/github/followers/jonnitto.svg?style=social&label=Follow)](https://github.com/jonnitto/followers)
+[![Follow Jon on Twitter](https://img.shields.io/twitter/follow/jonnitto.svg?style=social&label=Follow)](https://twitter.com/jonnitto)
+
+Jonnitto.Sitemap
+================
 
 XML-Sitemap for [Neos CMS](https://www.neos.io) with some improvements:
 
@@ -17,7 +22,7 @@ To activate the automatic `robots.txt` you have to delete the `robots.txt` insid
 
 If you only want to render a subset of the available language dimensions (e.g., if the filling is not yet ready) you can set this in the `Settings.yaml`:
 
-```
+```yaml
 Jonnitto:
   Sitemap:
     robotsTxt:
@@ -29,7 +34,7 @@ Installation
 ------------
 Most of the time you have to make small adjustments to a package (e.g. configuration in Settings.yaml). Because of that, it is important to add the corresponding package to the composer from your theme package. Mostly this is the site packages located under Packages/Sites/. To install it correctly go to your theme package (e.g.Packages/Sites/Foo.Bar) and run following command:
 
-```
+```bash
 composer require jonnitto/sitemap --no-update
 ```
 
