@@ -6,7 +6,7 @@ prototype(Jonnitto.Sitemap:TxtRobots) < prototype(Neos.Fusion:Http.Message) {
         sitemaps = Neos.Fusion:Case {
             hasLanguage {
                 condition = ${Configuration.setting('Neos.ContentRepository.contentDimensions.language') != null}
-                renderer = DimensionsMenu {
+                renderer = Neos.Neos:DimensionsMenu {
                     dimension = 'language'
                     templatePath = 'resource://Jonnitto.Sitemap/Private/Fusion/TxtRobots/Sitemap.html'
                     presets = ${Configuration.setting('Jonnitto.Sitemap.robotsTxt.dimensionsPresets')}
@@ -16,9 +16,9 @@ prototype(Jonnitto.Sitemap:TxtRobots) < prototype(Neos.Fusion:Http.Message) {
             }
             noLanguage {
                 condition = true
-                renderer = Fusion:Array {
+                renderer = Neos.Fusion:Array {
                     sitemap = 'Sitemap: '
-                    url = NodeUri {
+                    url = Neos.Neos:NodeUri {
                         absolute = true
                         format = 'xml.improvedsitemap'
                         node = ${site}

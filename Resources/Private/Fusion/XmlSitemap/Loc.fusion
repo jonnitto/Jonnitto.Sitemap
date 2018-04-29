@@ -1,6 +1,6 @@
 prototype(Jonnitto.Sitemap:Loc) < prototype(Neos.Fusion:Tag) {
     tagName = 'loc'
-    content = NodeUri {
+    content = Neos.Neos:NodeUri {
         node = ${node}
         format = 'html'
         absolute = true
