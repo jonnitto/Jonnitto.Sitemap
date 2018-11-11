@@ -1,7 +1,0 @@
-prototype(Jonnitto.Sitemap:UrlSet) < prototype(Neos.Fusion:Tag) {
-    @context.configuration = ${Configuration.setting('Jonnitto.Sitemap')}
-    tagName = 'urlset'
-    attributes.xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'
-    content = Jonnitto.Sitemap:Collection
-    @cache.entryTags.1 = ${'DescendantOf_' + site.identifier}
-}

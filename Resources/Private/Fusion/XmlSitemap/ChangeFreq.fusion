@@ -1,5 +1,0 @@
-prototype(Jonnitto.Sitemap:ChangeFreq) < prototype(Neos.Fusion:Tag) {
-    tagName = 'changefreq'
-    content = ${q(node).property('xmlSitemapChangeFrequency')}
-    @if.hasValue = ${this.content ? true : false}
-}
